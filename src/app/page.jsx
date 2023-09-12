@@ -1,9 +1,9 @@
+import Feed from "./_components/feed/Feed";
 
-
-export default function Home() {
+export default async function Home() {
   return (
-    <div className="">
-      Main Body
+    <div className="flex bg-gray-100">
+      <Feed></Feed>
     </div>
-  )
+  );
 }
