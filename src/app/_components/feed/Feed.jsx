@@ -1,4 +1,5 @@
 import CreatePost from "../createpost/CreatePost";
+import Posts from "../posts/Posts";
 
 const Feed = () => {
   return (
@@ -7,6 +8,7 @@ const Feed = () => {
         {/* Create Post */}
         <CreatePost></CreatePost>
         {/* pages */}
+        <Posts></Posts>
       </div>
     </div>
   );
