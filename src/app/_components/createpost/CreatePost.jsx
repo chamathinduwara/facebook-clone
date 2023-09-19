@@ -8,12 +8,15 @@ import { IoMdPhotos } from "react-icons/io";
 import { BsEmojiSmile } from "react-icons/bs";
 import { useRef, useState } from "react";
 import { useSession } from "next-auth/react";
+import { useDispatch } from "react-redux";
+import { addPost } from "../../../redux/features/postSlice";
 
 const CreatePost = () => {
   const FACEBOOK_CLONE_ENDPOINT = "";
   const inputRef = useRef(null);
   const hiddenFileInput = useRef(null);
   const { data: session, status } = useSession();
+  const dispatch = useDispatch();
 
   const [imageToPost, setImageToPost] = useState(null);
 
@@ -52,6 +55,7 @@ const CreatePost = () => {
       })
       .then((response) => {
         inputRef.current.value = "";
+        dispatch(addPost(response.data));
         removeImage();
       })
       .catch((error) => {

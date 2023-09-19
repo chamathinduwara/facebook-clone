@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Sidebar from "./_components/sidebar/Sidebar";
 import RightSidebar from "./_components/rightSidebar/RightSidebar";
 import NextAuthSessionProvider from "./_providers/sessionProvider";
+import { Providers } from "../redux/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,15 +18,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NextAuthSessionProvider>
-          <Header></Header>
-          <main className="flex bg-gray-100">
-            {/* left sidebar */}
-            <Sidebar></Sidebar>
-            {/* main container */}
-            {children}
-            {/* right sidebar */}
-            <RightSidebar />
-          </main>
+          <Providers>
+            <Header></Header>
+            <main className="flex bg-gray-100">
+              {/* left sidebar */}
+              <Sidebar></Sidebar>
+              {/* main container */}
+              {children}
+              {/* right sidebar */}
+              <RightSidebar />
+            </main>
+          </Providers>
         </NextAuthSessionProvider>
       </body>
     </html>
