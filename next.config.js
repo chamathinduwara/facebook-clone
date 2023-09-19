@@ -8,7 +8,12 @@ const nextConfig = {
                 port: '',
                 pathname: '/1560768/5550/i/950/depositphotos_55500797-stock-photo-woman-writing-url-on-blackboard.jpg',
             },
+
         ],
+        domains: [
+            'images.pexels.com',
+            'avatars.githubusercontent.com'
+        ]
     },
 }
 

@@ -10,14 +10,18 @@ import { MdOutlineExpandMore, MdOutlineOndemandVideo } from "react-icons/md";
 import { RiFlag2Line } from "react-icons/ri";
 import { IoGameControllerOutline } from "react-icons/io5";
 import { signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 const Header = () => {
+  const { data: session } = useSession();
+
   return (
     <div className="maindiv">
       {/* {Left} */}
       <div className="leftdiv min-w-fit">
         <Image
           src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg"
+          className="rounded-full"
           alt="Facebook Logo"
           width={40}
           height={40}
@@ -54,7 +58,7 @@ const Header = () => {
       {/* {Right} */}
       <div className="flex items-center justify-end mi-w-fit space-x-2">
         <Image
-          src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg"
+          src={session?.user.image}
           alt="Facebook Logo"
           width={40}
           height={40}
@@ -62,7 +66,7 @@ const Header = () => {
           onClick={signOut}
         />
         <p className="hidden xl:inline-flex font-semibold text-sm whitespace-nowrap p-3 max-w-xs">
-          Chamath
+          {session?.user.name}
         </p>
         <CgMenuGridO
           className="hidden lg:inline-flex h-10 w-10 bg-gray-200 text-gray-600
