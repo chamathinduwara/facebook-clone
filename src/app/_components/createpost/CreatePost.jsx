@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 import Image from "next/image";
@@ -12,7 +13,7 @@ import { useDispatch } from "react-redux";
 import { addPost } from "../../../redux/features/postSlice";
 
 const CreatePost = () => {
-  const FACEBOOK_CLONE_ENDPOINT = "";
+  const FACEBOOK_CLONE_ENDPOINT = "http://localhost:8080/api/v1/post";
   const inputRef = useRef(null);
   const hiddenFileInput = useRef(null);
   const { data: session, status } = useSession();
@@ -56,6 +57,7 @@ const CreatePost = () => {
       .then((response) => {
         inputRef.current.value = "";
         dispatch(addPost(response.data));
+        console.log(response.data);
         removeImage();
       })
       .catch((error) => {

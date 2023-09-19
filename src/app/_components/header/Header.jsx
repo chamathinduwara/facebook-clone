@@ -9,8 +9,7 @@ import { AiFillMessage, AiFillBell, AiOutlineShop } from "react-icons/ai";
 import { MdOutlineExpandMore, MdOutlineOndemandVideo } from "react-icons/md";
 import { RiFlag2Line } from "react-icons/ri";
 import { IoGameControllerOutline } from "react-icons/io5";
-import { signOut } from "next-auth/react";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 
 const Header = () => {
   const { data: session } = useSession();
@@ -66,7 +65,7 @@ const Header = () => {
           onClick={signOut}
         />
         <p className="hidden xl:inline-flex font-semibold text-sm whitespace-nowrap p-3 max-w-xs">
-          {session?.user.name}
+          {session?.user.name.split(" ")[0]}
         </p>
         <CgMenuGridO
           className="hidden lg:inline-flex h-10 w-10 bg-gray-200 text-gray-600
