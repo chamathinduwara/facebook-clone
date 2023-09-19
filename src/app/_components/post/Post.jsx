@@ -1,33 +1,37 @@
+"use client";
+
 import Image from "next/image";
 import { FiThumbsUp } from "react-icons/fi";
 import { FaRegCommentAlt } from "react-icons/fa";
 import { RiShareForwardLine } from "react-icons/ri";
 
-const Post = () => {
+const Post = ({ post }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" key={post.id}>
       <div className="bg-white mt-6 rounded-t-md p-4">
         <div className="flex space-x-2 items-center">
           <img
-            src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg"
+            src={post.profilePic}
             alt="Profile Picture"
             className="rounded-full h-10 w-10"
           />
           <div>
-            <p className="font-medium">Chamath</p>
-            <p className="text-xs text-gray-500">08-09-2023</p>
+            <p className="font-medium">{post.name}</p>
+            <p className="text-xs text-gray-500">{post.timestamp}</p>
           </div>
         </div>
-        <p className="py-4">Post Name</p>
+        <p className="py-4">{post.post}</p>
       </div>
-      <div className="flex items-start justify-center h-60 md:h-96 bg-white">
-        <Image
-          src="https://st2.depositphotos.com/1560768/5550/i/950/depositphotos_55500797-stock-photo-woman-writing-url-on-blackboard.jpg"
-          alt="Picture of the author"
-          width={500}
-          height={500}
-        />
-      </div>
+      {post.image != null && (
+        <div className="flex items-start justify-center h-60 md:h-96 bg-white">
+          <Image
+            src={post.image}
+            alt="Picture of the author"
+            width={500}
+            height={500}
+          />
+        </div>
+      )}
 
       {/* Footer */}
       <div className="flex item-center justify-center bg-white p-2">
