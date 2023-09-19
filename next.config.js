@@ -1,7 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['unsplash.com'], // Add any other allowed domains here if needed
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'st2.depositphotos.com',
+                port: '',
+                pathname: '/1560768/5550/i/950/depositphotos_55500797-stock-photo-woman-writing-url-on-blackboard.jpg',
+            },
+
+        ],
+        domains: [
+            'images.pexels.com',
+            'avatars.githubusercontent.com'
+        ]
     },
 }
 
