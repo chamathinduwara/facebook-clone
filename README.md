@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Facebook Clone
+## Overview
+This is a front-end web clone of Facebook built using Next.js 13 and styled with Tailwind CSS. It also integrates NextAuth.js with GitHub as the authentication provider.
 
-## Getting Started
+## Features
 
-First, run the development server:
+- User authentication with GitHub.
+- [List any other key features of your application]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone this repository:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+   ```bash
+   git clone https://github.com/yourusername/facebook-clone.git
+   ```
+2. Change directory:
+   ```bash
+   cd facebook-clone
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Create a `.env.local` file in the project root and configure your GitHub OAuth credentials. You can obtain these by creating a GitHub OAuth App.
+   ```bash
+   GITHUB_CLIENT_ID=your-github-client-id
+   GITHUB_CLIENT_SECRET=your-github-client-secret
+   ```
+5. Access the application in your browser at
+   `http://localhost:3000`.
+   
+## Contributing
+Welcome contributions! To enhance the Energy Market Frontend, follow these steps:
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feature-name`
+3. Implement your changes and commit: `git commit -m 'Add feature'`
+4. Push to your branch: `git push origin feature-name`
+5. Create a pull request.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## License
+This project is open source and available under the MIT License.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact
+- For inquiries or support, feel free to contact us at csschamathinduwara@gmail.com
+- Connect with us on GitHub: chamathinduwara
