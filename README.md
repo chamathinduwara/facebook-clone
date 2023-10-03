@@ -12,7 +12,7 @@ This is a front-end web clone of Facebook built using Next.js 13 and styled with
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/facebook-clone.git
+   git clone https://github.com/chamathinduwara/facebook-clone.git
    ```
 2. Change directory:
    ```bash
