@@ -28,7 +28,9 @@ This is a front-end web clone of Facebook built using Next.js 13 and styled with
    GITHUB_CLIENT_SECRET=your-github-client-secret
    ```
 5. Run the Application at dev mode
-   `npm run dev`.
+   ```bash
+   npm run dev
+   ```
    
 5. Access the application in your browser at
    `http://localhost:3000`.
